@@ -1,0 +1,2 @@
+- 말랑콩떡 Config Server
+  - init commit (2023-08-01)

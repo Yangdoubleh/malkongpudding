@@ -7,8 +7,19 @@ spring:
       server:
 
         git:
-          uri: https://github.com/Yangdoubleh/malkongpuddingconfig
-          default-label: main
+          uri: git@github.com:Yangdoubleh/malkongpuddingconfig.git
+          default-label: master
+          private-key: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+            QyNTUxOQAAACBeO1JQ1RUTxgKn1cN+w9iUQX3Bw8Ebin2dx3Lzo7xaxAAAAJhfCJz0Xwic
+            9AAAAAtzc2gtZWQyNTUxOQAAACBeO1JQ1RUTxgKn1cN+w9iUQX3Bw8Ebin2dx3Lzo7xaxA
+            AAAEDpjgrj9yJQLlcAj6wo19PVc/1NAHyHxyIkgeHxzXnzXl47UlDVFRPGAqfVw37D2JRB
+            fcHDwRuKfZ3HcvOjvFrEAAAAEHdoeTM3NEBuYXZlci5jb20BAgMEBQ==
+            -----END OPENSSH PRIVATE KEY-----
+          ignore-local-ssh-settings: true
+        encrypt:
+          enabled: false
 
 # actuator 설정
 management:
@@ -19,3 +30,6 @@ management:
   endpoint:
     shutdown:
       enabled: true
+
+encrypt:
+  key: mkpd-cipher

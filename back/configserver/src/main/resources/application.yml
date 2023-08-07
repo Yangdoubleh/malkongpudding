@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8081 #Config Server port
 
 spring:
   cloud:
@@ -7,7 +7,7 @@ spring:
       server:
 
         git:
-          uri: git@github.com:Yangdoubleh/malkongpuddingconfig.git
+          uri: git@github.com:Yangdoubleh/malkongpuddingconfig.git #내 git repository
           default-label: master
           private-key: |
             -----BEGIN OPENSSH PRIVATE KEY-----
@@ -19,7 +19,7 @@ spring:
             -----END OPENSSH PRIVATE KEY-----
           ignore-local-ssh-settings: true
         encrypt:
-          enabled: false
+          enabled: false # 모든 설정 값 encrypt
 
 # actuator 설정
 management:
@@ -32,4 +32,4 @@ management:
       enabled: true
 
 encrypt:
-  key: mkpd-cipher
+  key: mkpd-cipher #encrypt key

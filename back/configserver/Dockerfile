@@ -1,0 +1,4 @@
+FROM ubuntu:latest
+
+EXPOSE 8081
+ENV TZ=ASIA/SEOUL

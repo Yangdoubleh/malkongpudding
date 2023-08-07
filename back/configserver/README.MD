@@ -1,2 +1,3 @@
 - 말랑콩떡 Config Server
   - init commit (2023-08-01)
+  - jenkins server 구동을 위한 Dockerfile 추가 및 build.gradle 수정(2023-08-07)

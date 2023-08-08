@@ -7,16 +7,10 @@ spring:
       server:
 
         git:
-          uri: git@github.com:Yangdoubleh/malkongpuddingconfig.git #내 git repository
+          uri: ENC(CUDSLN4ceaUSuHZNM+l+ySjhKg1O/Qus3tKO89OBrX5hObVxu7zLWhSIpxo7ML6gKoZ2xcl0oVobIjCzU3upeg==) #내 git repository
           default-label: master
           private-key: |
-            -----BEGIN OPENSSH PRIVATE KEY-----
-            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-            QyNTUxOQAAACBeO1JQ1RUTxgKn1cN+w9iUQX3Bw8Ebin2dx3Lzo7xaxAAAAJhfCJz0Xwic
-            9AAAAAtzc2gtZWQyNTUxOQAAACBeO1JQ1RUTxgKn1cN+w9iUQX3Bw8Ebin2dx3Lzo7xaxA
-            AAAEDpjgrj9yJQLlcAj6wo19PVc/1NAHyHxyIkgeHxzXnzXl47UlDVFRPGAqfVw37D2JRB
-            fcHDwRuKfZ3HcvOjvFrEAAAAEHdoeTM3NEBuYXZlci5jb20BAgMEBQ==
-            -----END OPENSSH PRIVATE KEY-----
+            ENC(vrJj0imPYZvgImZMr+VMRAmIAb0y80dVvXFeQsaNF9FfMPlBvgB9asBC8+RyTIBff+2gCrwGICV4E8ocTpMELTg64FfboIhhmATk+zc4q03HG/U6oBXBrw7am5rO85BHf1lUoB5mKUEkg75Tk0usfJK2NTniUZLgD+TwiuOVqw920AaQwj4BP2ticQcVe7b5Fd0ZIohxg0PGyQlZyLmCF8NQRh8KcZaq3u7HHupjbd4QikkUbWCgf9cU2dpUZ6XndtrpGRi72xrAI8OsxS1YhLgxhmys/mPg9qJUkirB7Z/vkzDK1oap7L742SHyj3BW9eW9M70NT1m0W0QZ7BeKrWVqHhsFkySlG+JqnjsmZPCoWoccnQFBBwdUy2qVBLS0EJ/yruBFHyAPf6mvg1GduCVfQTEsWRqo3OS8LY4X/KIrBHUMwPAgCvQJt/De0faFn+877RjCg7kuzrdaG6bgVzlcP2v/rABI3A2nZDJBeyBQNWYr8rQaS2ljDWZJYbGdsf0clYXJfxAbpyrlYUj+WzXT/w2nCRYrKhCOU3VseenGJcWJlOPy/ZY0lR9cmRu5G/zKbKLpSBBaFdL41XBt8xq1+wvzRPPZZWwaJCVq/Ekj6TUpQU8O0QrN5E10W8tY+Th3eomkk4mBM2pnc+3BDg==)
           ignore-local-ssh-settings: true
         encrypt:
           enabled: false # 모든 설정 값 encrypt
@@ -31,5 +25,7 @@ management:
     shutdown:
       enabled: true
 
-encrypt:
-  key: mkpd-cipher #encrypt key
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+  secrete-key: ${JASYPT_SECRET_KEY}

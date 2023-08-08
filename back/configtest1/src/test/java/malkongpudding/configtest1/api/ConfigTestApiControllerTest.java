@@ -1,6 +1,5 @@
 package malkongpudding.configtest1.api;
 
-import com.fasterxml.jackson.core.JsonToken;
 import malkongpudding.configtest1.api.controller.ConfigTestApiController;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

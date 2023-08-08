@@ -9,5 +9,7 @@ spring:
   profiles:
     active: local
 
-encrypt:
-  key: mkpd-cipher
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+  secrete-key: ${JASYPT_SECRET_KEY}

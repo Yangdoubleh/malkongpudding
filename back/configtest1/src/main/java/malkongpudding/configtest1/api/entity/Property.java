@@ -6,6 +6,7 @@ import lombok.Getter;
 @Builder
 @Getter
 public class Property {
-    private String key;
-    private String value;
+    private String uri;
+    private String username;
+    private String password;
 }

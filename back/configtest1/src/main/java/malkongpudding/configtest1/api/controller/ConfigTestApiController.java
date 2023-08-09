@@ -27,14 +27,14 @@ public class ConfigTestApiController implements EnvironmentAware {
     @RequestMapping("/config")
     @ResponseStatus(HttpStatus.OK)
     public Mono<ResponseEntity> getConfig() {
-        List<Property> propertyList = Arrays.asList(
-                Property.builder().key("uri").value(env.getProperty("spring.datasource.uri")).build(),
-                Property.builder().key("username").value(env.getProperty("spring.datasource.username")).build(),
-                Property.builder().key("password").value(env.getProperty("spring.datasource.password")).build()
-        );
+        Property configProperty = Property.builder()
+                .uri(env.getProperty("spring.datasource.uri"))
+                .username(env.getProperty("spring.datasource.username"))
+                .password(env.getProperty("spring.datasource.password"))
+                .build();
 
         return Mono.just(ResponseEntity.status(HttpStatus.OK)
-                                                        .body(propertyList)
+                                                        .body(configProperty)
         );
     }
 }

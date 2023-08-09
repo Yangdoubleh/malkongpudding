@@ -8,8 +8,3 @@ spring:
     name: server1
   profiles:
     active: local
-
-jasypt:
-  encryptor:
-    bean: jasyptStringEncryptor
-  secrete-key: ${JASYPT_SECRET_KEY}

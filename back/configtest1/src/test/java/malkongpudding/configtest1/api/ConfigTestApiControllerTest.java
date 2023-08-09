@@ -22,6 +22,6 @@ class ConfigTestApiControllerTest {
         this.webTestClient.get().uri("/config").exchange()
                 .expectStatus().isOk()
                 .expectBody(Property.class)
-                .value(Property::toString);
+                .value(System.out::println);
     }
 }

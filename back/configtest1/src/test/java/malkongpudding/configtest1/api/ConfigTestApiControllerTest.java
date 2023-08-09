@@ -1,6 +1,7 @@
 package malkongpudding.configtest1.api;
 
 import malkongpudding.configtest1.api.controller.ConfigTestApiController;
+import malkongpudding.configtest1.api.entity.Property;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ class ConfigTestApiControllerTest {
     void getConfig() {
         this.webTestClient.get().uri("/config").exchange()
                 .expectStatus().isOk()
-                .expectBody(List.class).value(System.out::println);
+                .expectBody(Property.class)
+                .value(System.out::println);
     }
 }

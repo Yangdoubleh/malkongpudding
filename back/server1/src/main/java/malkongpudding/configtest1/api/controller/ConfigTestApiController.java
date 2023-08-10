@@ -5,6 +5,7 @@ import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ConfigTestApiController implements EnvironmentAware {
@@ -18,6 +19,7 @@ public class ConfigTestApiController implements EnvironmentAware {
     }
 
     @RequestMapping("/config")
+    @ResponseBody
     public Property getConfig() {
         Property configProperty = Property.builder()
                 .uri(env.getProperty("spring.datasource.uri"))

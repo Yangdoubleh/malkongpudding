@@ -29,6 +29,7 @@ dependencies {
 	testImplementation 'org.mockito:mockito-core:4.8.0'
 	testImplementation 'io.projectreactor:reactor-test'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 }
 
 dependencyManagement {

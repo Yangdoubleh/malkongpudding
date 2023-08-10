@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import reactor.core.publisher.Mono;
 
-import java.util.Arrays;
-import java.util.List;
-
 @Controller
 public class ConfigTestApiController implements EnvironmentAware {
 

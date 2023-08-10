@@ -1,3 +1,4 @@
 - 말랑콩떡 BACKEND
   - ConfigServer 생성(2023-08-01)
   - ConfigServer 구현 및 테스트 서버에서 config 받아오기(2023-08-02)
+  - Eureka Server 구현 및 테스트 서버 연결(2023-08-10)
